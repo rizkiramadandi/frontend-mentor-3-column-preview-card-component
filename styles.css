@@ -1,0 +1,115 @@
+:root {
+    --mobile: 375px;
+    --desktop: 1440px;
+
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+
+    --font-size: 15px;
+
+    --font-family-big-shoulders-display: 'Big Shoulders Display', cursive;
+    --font-family-lexend-deca: 'Lexend Deca', sans-serif;
+
+    --weight-normal: 400;
+    --weight-bold: 700;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+footer {
+    margin: 1rem;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: var(--very-light-gray-background-headings-buttons);
+    font-size: var(--font-size);
+    font-family: var(--font-family-lexend-deca);
+}
+
+.container {
+    margin: 1rem auto;
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card {
+    max-width: 15rem;
+    color: var(--transparent-white-paragraphs);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#sedans {
+    background-color: var(--bright-orange);
+}
+
+#suvs {
+    background-color: var(--dark-cyan);
+}
+
+#luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.card-title {
+    font-family: var(--font-family-big-shoulders-display) !important;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    color: var(--very-light-gray-background-headings-buttons) !important;
+}
+
+.card-subtitle {
+    line-height: 1.75;
+    margin-bottom: 4rem;
+}
+
+.learn-more-container {
+    margin-top: auto;
+}
+
+button.learn-more {
+    background-color: var(--very-light-gray-background-headings-buttons);
+    border: none;
+    display: inline-block;
+    border-radius: 2rem;
+    padding: .75rem 2rem;
+    transition: .25s;
+}
+
+#sedans button.learn-more {
+    color: var(--bright-orange);
+}
+
+#suvs button.learn-more {
+    color: var(--dark-cyan);
+}
+
+#luxury button.learn-more {
+    color: var(--very-dark-cyan);
+}
+
+button.learn-more:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 .5rem .5rem rgba(0,0,0,.25));
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-auto-flow: row;
+    }
+}
